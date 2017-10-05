@@ -1,0 +1,46 @@
+$svg-dimension: 2rem;
+
+body{
+  font-family: sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.top-bar{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  font-weight: 800;
+  color: whitesmoke;
+  background-color: #333333;
+}
+
+.top-bar, .top-bar ul{
+  background-color: #333333;
+}
+
+svg{
+  width: $svg-dimension;
+  height: $svg-dimension;
+  animation-name: spinner-rotate;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out; 
+}
+
+@keyframes spinner-rotate{
+    0%{transform: rotate(0deg);}
+    100%{transform: rotate(360deg);}
+}
+
+.weather-result{
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+}
+
+input[type=text]{
+  box-shadow: 0 0 0;
+}
